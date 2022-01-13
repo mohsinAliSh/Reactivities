@@ -23,6 +23,7 @@ namespace API
             services.AddDbContext<DataContext>(opt=>{
                 opt.UseSqlite(_config.GetConnectionString("DefaultConnection"));
             });
+            services.AddCors();
 
         }
 
@@ -43,6 +44,9 @@ namespace API
 
             app.UseRouting();
 
+            app.UseCors(x=>{
+                x.AllowAnyMethod().WithOrigins("http://localhost:3000");
+            });
 
             app.UseAuthorization();
 
