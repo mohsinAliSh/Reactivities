@@ -6,7 +6,7 @@ import { store } from "./store";
 export default class ProfileStore{
     profile:Profile | null=null;
     loadingProfile=false;
-    uplaoding=false;
+    uploading=false;
     loading=false;
 
     constructor(){
@@ -42,7 +42,7 @@ export default class ProfileStore{
         }
     }
     uploadPhoto=async(file:Blob)=>{
-        this.uplaoding=true;
+        this.uploading=true;
         try {
             const response=await agent.Profiles.uploadPhoto(file);
             const  photo=response.data;
@@ -54,12 +54,12 @@ export default class ProfileStore{
                         this.profile.image=photo.url;
                     }
                 }
-                this.uplaoding=false;
+                this.uploading=false;
             })
             
         } catch (error) {
             console.log(error);
-            runInAction(()=>this.uplaoding=false);
+            runInAction(()=>this.uploading=false);
             
         }
     }
