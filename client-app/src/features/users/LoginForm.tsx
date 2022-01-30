@@ -4,7 +4,6 @@ import React from 'react';
 import { Button, Header, Label } from 'semantic-ui-react';
 import MyTextInput from '../../app/common/form/MyTextInput';
 import { useStore } from '../../app/stores/store';
-import UserStore from '../../app/stores/userStore';
 
 export default observer( function LoginForm() {
     const{userStore}=useStore();

@@ -1,5 +1,4 @@
 import { makeAutoObservable, runInAction } from "mobx";
-import { isConstructorDeclaration } from "typescript";
 import { history } from "../..";
 import agent from "../api/agent";
 import { User, UserFormValues } from "../models/user";

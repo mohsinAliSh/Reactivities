@@ -1,5 +1,4 @@
 import React from "react";
-import { act } from "react-dom/test-utils";
 import { Dimmer, Loader } from "semantic-ui-react";
 
 interface Props{
