@@ -12,6 +12,7 @@ export interface Profile{
 
 }
 
+
 export class Profile implements Profile{
     constructor (user:User){
         this.username=user.username;
@@ -25,3 +26,10 @@ export interface Photo {
     url:string;
     isMain:boolean;
 }
+
+export interface UserActivity {
+    id: string;
+    title: string;
+    category: string;
+    date: Date;
+   }
