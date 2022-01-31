@@ -10,8 +10,8 @@ namespace Application.Profiles
     {
         public class Query : IRequest<Result<List<UserActivityDto>>>
         {
-            public string? Username { get; set; }
-            public string? Predicate { get; set; }
+            public string Username { get; set; }
+            public string Predicate { get; set; }
         }
         public class Handler : IRequestHandler<Query,
        Result<List<UserActivityDto>>>

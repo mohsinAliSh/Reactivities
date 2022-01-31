@@ -3,7 +3,6 @@ using Application.Infrastructure;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Persistence;
 
@@ -19,7 +18,6 @@ namespace Application.Activities
             private readonly IUserAccessor _userAccessor;
             private readonly IMapper _mapper;
             private readonly DataContext _context;
-            private readonly ILogger<List> _logger;
 
             public Handler(DataContext context,IMapper mapper,IUserAccessor userAccessor)
             {

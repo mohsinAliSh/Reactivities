@@ -10,8 +10,8 @@ namespace Application.Profiles
     {
         public class Command : IRequest<Result<Unit>>
         {
-            public string? DisplayName { get; set; }
-            public string? Bio { get; set; }
+            public string DisplayName { get; set; }
+            public string Bio { get; set; }
         }
         public class CommandValidator : AbstractValidator<Command>
         {
